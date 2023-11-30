@@ -4,6 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * The ExpenseTrackerModel class represents a model which can add, remove, get transactions as well as
+ * setMatchedFilterIndices and getMatchedFilterIndices for filtering the transactions which are stored in the transaction object
+ *
+ * This class follows an observable design pattern and notifies the listeners whenever state is changed
+ *
+ * @author [Heather Conboy]
+ * @see Transaction
+ * @see ExpenseTrackerModelListener
+ */
 public class ExpenseTrackerModel {
 
   //encapsulation - data integrity
@@ -76,6 +86,10 @@ public class ExpenseTrackerModel {
       return false;
   }
 
+    /**
+     * This is for testing the number of listners
+     * @return 0
+     */
   public int numberOfListeners() {
       // For testing, this is one of the methods.
       //
@@ -83,6 +97,11 @@ public class ExpenseTrackerModel {
       return 0;
   }
 
+    /**
+     * This is for testing purpose
+     * @param listener The ExpenseTrackerModelListener to contain listener
+     * @return False
+     */
   public boolean containsListener(ExpenseTrackerModelListener listener) {
       // For testing, this is one of the methods.
       //
